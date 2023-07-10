@@ -163,6 +163,34 @@ id est laborum.</textarea>
     <h2>File upload</h2>
     <input type="file" />
 
+    <h2>Dropdowns</h2>
+
+    <h3>Select one</h3>
+    <label for="select-one-genre">
+        Favorite movie genre:
+    </label><br />
+    <select id="select-one-genre">
+        <option value="COMEDY">Comedy</option>
+        <option value="DRAMA">Drama</option>
+        <option selected value="SCIFI">
+            Science Fiction
+        </option>
+        <option value="FANTASY">Fantasy</option>
+    </select>
+
+    <h3>Select many</h3>
+    <label for="select-many-genre">
+        Favorite movie genres:
+    </label><br />
+    <select id="select-many-genre" multiple>
+        <option selected value="COMEDY">Comedy</option>
+        <option value="DRAMA">Drama</option>
+        <option selected value="SCIFI">
+            Science Fiction
+        </option>
+        <option value="FANTASY">Fantasy</option>
+    </select>
+
     <h2>Radio buttons</h2>
 
     <label>Favorite movie genre:</label>
@@ -181,7 +209,7 @@ id est laborum.</textarea>
     <label for="radio-scifi">Science Fiction</label>
     <br />
     <input type="radio" value="FANTASY"
-           name="radio-genre" id="radio-fantasy" checked/>
+           name="radio-genre" id="radio-fantasy" checked />
     <label for="radio-fantasy">Fantasy</label>
 
     <h2>Checkboxes</h2>
