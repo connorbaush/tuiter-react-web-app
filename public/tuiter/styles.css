@@ -10,10 +10,12 @@ p#id-selector-2 {
     background-color: yellow;
     color: black;
 }
+
 .class-selector {
     background-color: yellow;
     color: blue;
 }
+
 .selector-1 .selector-3 {
     background-color: red;
     color: white;
@@ -23,6 +25,7 @@ p#id-selector-2 {
     background-color: yellow;
     color: blue;
 }
+
 .fg-color-black {
     color: black;
 }
@@ -58,6 +61,7 @@ p#id-selector-2 {
 .bg-color-green {
     background-color: green;
 }
+
 .border-fat {
     border-width: 20px 30px 20px 30px;
 }
@@ -85,6 +89,7 @@ p#id-selector-2 {
 .border-blue {
     border-color: #7070ff;
 }
+
 .padded-top-left {
     padding-top: 50px;
     padding-left: 50px;
@@ -127,6 +132,7 @@ p#id-selector-2 {
 .rounded-corners-all-around {
     border-radius: 50px;
 }
+
 .dimension-portrait {
     width: 75px;
     height: 100px;
@@ -161,6 +167,7 @@ p#id-selector-2 {
 .pos-relative {
     position: relative;
 }
+
 .pos-absolute-10-10 {
     position: absolute;
     top: 10px;
@@ -178,14 +185,17 @@ p#id-selector-2 {
     top: 20px;
     left: 120px;
 }
+
 .pos-fixed {
     position: fixed;
     right: 0px;
     bottom: 50%;
 }
+
 .zindex-bring-to-front {
     z-index: 10;
 }
+
 .float-left {
     float: left;
 }
@@ -198,19 +208,16 @@ p#id-selector-2 {
 .float-done {
     clear: both;
 }
+
 .grid-row {
     clear: both;
-}
-
-.grid-col-fifth-page{
-    width: 20%;
-    float: left;
 }
 
 .grid-col-half-page {
     width: 50%;
     float: left;
 }
+
 .grid-col-third-page {
     width: 33%;
     float: left;
@@ -247,4 +254,102 @@ p#id-selector-2 {
 }
 
 
+input[type=search] {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: lightgrey;
+    color: darkgrey;
+}
+
+.wd-input-icons i {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 10px;
+    color: darkgrey;
+}
+
+.wd-input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wd-icon {
+    padding: 10px;
+    min-width: 40px;
+    margin-bottom: 35px;
+    color: darkgrey;
+}
+
+.wd-input-field {
+    width: 100%;
+    text-align: left;
+}
+
+.wd-tab {
+    position: relative;
+    height: 30px;
+    width: auto;
+    margin-right: 13%;
+}
+.wd-tab-selected {
+    font-weight: bold;
+    border-bottom: solid;
+    border-color: blue;
+}
+
+.wd-big-image {
+    margin-top: 5%;
+}
+
+.wd-image-with-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.wd-bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 30px;
+}
+.wd-tuit-expl{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2%;
+
+}
+.wd-tuit-head {
+    position: relative;
+    text-align: left;
+    color: grey;
+}
+
+    .wd-tuit-head i {
+        position: absolute;
+        margin-left: 10px;
+        color: darkgrey;
+    }
+
+.wd-tuit-topic {
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+}
+
+.wd-tuit-dots {
+    position: relative;
+    text-align: right;
+    color: grey;
+    width: 100%;
+}
+.wd-inline-img {
+    display: inline;
+    vertical-align: baseline;
+}
 
