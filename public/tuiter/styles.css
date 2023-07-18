@@ -366,4 +366,42 @@ input[type=search] {
     text-align: right;
 }
 
+.wd-rightcon {
+    color: darkgrey;
+    text-align: right;
+}
+
+.wd-leftcon{
+    color: darkgrey;
+    text-align: left;
+}
+
+.wd-left{
+    text-align: left;
+}
+
+.wd-tuit{
+    text-align: center;
+    margin-top:10%;
+    padding-right: 100%;
+    border: 1px solid lightgrey;
+}
+
+    .wd-tuit .icon {
+        margin-right: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .wd-tuit .user{
+        font-weight: bold;
+    }
+    .wd-tuit .user .handle{
+        color: lightgrey;
+    }
+    .wd-tuit .content{
+
+    }
+
 
