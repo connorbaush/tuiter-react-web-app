@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Labs from "./labs";
+import HelloWorld from "./labs/a3/hello-world";
+import Tuiter from "./tuiter";
+import { HashRouter } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-                  Welcome to Web Dev!
-        </p>
-        <a
-          className="App-link"
-          href="./labs/index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <HashRouter>
+            <div className="container">
+                <HelloWorld />
+                <Labs />
+                <Tuiter />
+            </div>
+        </HashRouter>
+    );
 }
-
 export default App;
