@@ -1,0 +1,64 @@
+.sidebar{
+    color:black;
+    font-size:large;
+}
+
+.input-with-icon{
+    position:relative;
+    color:black;
+    border-color:black;
+
+}
+.input-icon{
+    position:absolute;
+    left:10px;
+    top:10px;
+
+}
+input[type=search-ex] {
+    padding-left: 30px;
+}
+
+.rightcon{
+    position:absolute;
+    right:-25px;
+    top:10px;
+    color:blue;
+
+}
+
+.image-text {
+    position: absolute;
+    bottom: 5px;
+    text-align:left;
+    left: 15px;
+    font-size: large;
+}
+
+.tuit-heading{
+    position:inherit;
+    color:darkgrey;
+}
+.tuit-stuff {
+    position:inherit;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.to-left{
+    position:relative;
+    left:-25px;
+}
+
+.to-right{
+    position:inherit;
+    text-align:left;
+    margin-left:50px;
+}
+
+.full{
+    margin-left:20px;
+    width:350px;
+}
+
