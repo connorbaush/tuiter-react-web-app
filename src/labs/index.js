@@ -1,8 +1,12 @@
 import Assignment3 from "./a3/index.js";
+import { Link } from "react-router-dom";
+import Nav from "../nav";
+
 function Labs() {
     return (
         <div>
-            <Assignment3/>
+            <Nav />
+            <Assignment3 />
         </div>
     );
 }
