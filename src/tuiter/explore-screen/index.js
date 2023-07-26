@@ -7,6 +7,7 @@ function ExploreScreen() {
     return (
         <>
             <div className="row">
+
                 <div className="col-11 position-relative">
                     <input placeholder="Search Tuiter"
                         className="form-control rounded-pill ps-5" />
@@ -35,6 +36,7 @@ function ExploreScreen() {
                     SpaceX Starship</h1>
             </div>
             <TuitSummaryList />
+
         </>
     );
 };

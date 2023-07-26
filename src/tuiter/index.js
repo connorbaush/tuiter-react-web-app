@@ -25,7 +25,7 @@ function Tuiter() {
                         <Route path="/bookmarks" element={<BookmarksScreen />} />
                         <Route path="/profile" element={<ProfileScreen />} />
                     </Routes>
-                    <TuitSummaryList />
+                    
 
                 </div>
                 <div className="col-3">
