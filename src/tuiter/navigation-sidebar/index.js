@@ -34,11 +34,15 @@ const NavigationSidebar = () => {
         <div className="list-group">
             {links.map((link) => (
                 <Link
+                    key={link}
                     to={`/tuiter/${link}`}
                     className={`list-group-item text-capitalize ${active === link ? "active" : ""
                         }`}
                 >
-                    {getIcon(link)} {link}
+                    <span className="icon float-start me-2">{getIcon(link)}</span>
+                    <span className="text d-lg-none d-xl-block d-none ms-1">
+                        {link}
+                    </span>
                 </Link>
             ))}
         </div>

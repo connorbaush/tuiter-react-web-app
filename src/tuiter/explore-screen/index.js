@@ -6,12 +6,8 @@ import "./index.css";
 function ExploreScreen() {
     return (
         <>
-            <div class="d-block d-sm-none fa-2x">XS</div>
-            <div class="d-none d-sm-block d-md-none fa-2x">S</div>
-            <div class="d-none d-md-block d-lg-none fa-2x">M</div>
-            <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
-            <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
-            <div class="d-none d-xxl-block fa-2x">XXL</div>
+
+         
             <div className="row">
 
                 <div className="col-11 position-relative">
@@ -20,7 +16,7 @@ function ExploreScreen() {
                     <AiOutlineSearch className="fs-3 position-absolute 
                        wd-nudge-up"/>
                 </div>
-                <div className="col-1">
+                <div className="col-sm-1 align-items-center">
                     <GoGear className="wd-top-4 float-end
                        fs-3 position-relative"/>
                 </div>

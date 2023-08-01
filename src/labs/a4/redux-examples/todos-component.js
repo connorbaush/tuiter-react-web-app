@@ -30,14 +30,8 @@ const Todos = () => {
 
  return(
      <>
-         <div class="d-block d-sm-none fa-2x">XS</div>
-         <div class="d-none d-sm-block d-md-none fa-2x">S</div>
-         <div class="d-none d-md-block d-lg-none fa-2x">M</div>
-         <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
-         <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
-         <div class="d-none d-xxl-block fa-2x">XXL</div>
      <h3>Todos</h3>
-         <ul className="list-group">
+         <ul className="list-group col-sm-10">
              <li className="list-group-item">
                  <button onClick={createTodoClickHandler}
                      className="btn btn-primary w-25 
@@ -49,7 +43,7 @@ const Todos = () => {
              </li>
        {
          todos.map((todo, index) =>
-             <li className="list-group-item">
+             <li className="list-group-item ">
                  <button onClick={() =>
                      deleteTodoClickHandler(index)}
                      className="btn btn-danger 
