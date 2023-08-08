@@ -6,6 +6,8 @@ import "./index.css";
 function ExploreScreen() {
     return (
         <>
+
+         
             <div className="row">
 
                 <div className="col-11 position-relative">
@@ -14,7 +16,7 @@ function ExploreScreen() {
                     <AiOutlineSearch className="fs-3 position-absolute 
                        wd-nudge-up"/>
                 </div>
-                <div className="col-1">
+                <div className="col-sm-1 align-items-center">
                     <GoGear className="wd-top-4 float-end
                        fs-3 position-relative"/>
                 </div>
