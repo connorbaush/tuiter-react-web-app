@@ -22,24 +22,34 @@ const templateTuit = {
 const tuitsSlice = createSlice({
     name: 'tuits',
     initialState: { tuits: tuits },
-     reducers: {
+    reducers: {
         createTuit(state, action) {
             state.tuits.unshift({
                 ...action.payload,
                 ...templateTuit,
                 _id: (new Date()).getTime(),
             })
-         },
-         deleteTuit(state, action) {
-             const index = state.tuits
-                 .findIndex(tuit =>
-                     tuit._id === action.payload);
-             state.tuits.splice(index, 1);
-         }
+        },
+        deleteTuit(state, action) {
+            const index = state.tuits
+                .findIndex(tuit =>
+                    tuit._id === action.payload);
+            state.tuits.splice(index, 1);
+        },
+        likeTuit(state, action) {
+            const tuitId = action.payload;
+            const tuit = state.tuits
+                .findIndex(tuit =>
+                    tuit._id === action.payload);
+            if (tuit) {
+                tuit.liked = !tuit.liked;
+            }
+        }
 
     }
 
 });
 export const { createTuit } = tuitsSlice.actions;
 export const { deleteTuit } = tuitsSlice.actions;
+export const { likeTuit } = tuitsSlice.actions;
 export default tuitsSlice.reducer;

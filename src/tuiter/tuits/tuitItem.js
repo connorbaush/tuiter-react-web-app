@@ -3,6 +3,7 @@ import { FaReply, FaRetweet, FaHeart, FaShare } from "react-icons/fa";
 import { BiX } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { deleteTuit } from "../reducers/tuits-reducer";
+import { likeTuit } from "../reducers/tuits-reducer";
 let style = { color: "black" };
 const buttonStyle = {
     background: "transparent",
@@ -31,10 +32,11 @@ const TuitItem = (
     else {
         style = {color: "black"}
     }
-    function clicked() {
-        style = {color: "blue"}
-    }
+
     const dispatch = useDispatch();
+    const likedTuit = (id) => {
+        dispatch(likeTuit(id));
+    }
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuit(id));
     }
@@ -55,7 +57,7 @@ const TuitItem = (
                     <div className="float-start col-3"><FaReply/> {tuit.replies}</div>
                     <div className="float-start col-3"><FaRetweet/> {tuit.retuits}</div>
                     <div className="float-start col-3">
-                        <button onClick={clicked} style={buttonStyle}>
+                        <button onClick={() => likedTuit(tuit._id)} style={buttonStyle}>
                             <FaHeart style={style} />
                         </button>
                         {tuit.likes}
