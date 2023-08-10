@@ -1,8 +1,10 @@
 import React from "react";
-import { FaReply, FaRetweet, FaHeart, FaShare } from "react-icons/fa";
+import { FaReply, FaRetweet, FaHeart, FaShare, FaThumbsDown} from "react-icons/fa";
 import { BiX } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
+import { updateTuitThunk } from "../services/tuits-thunks";
+
 let style = { color: "black" };
 const buttonStyle = {
     background: "transparent",
@@ -31,12 +33,10 @@ const TuitItem = (
     else {
         style = {color: "black"}
     }
-    function clicked() {
-        style = {color: "blue"}
-    }
+
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
     return (
 
@@ -52,15 +52,29 @@ const TuitItem = (
                     <div>{tuit.userName} . {tuit.time}</div>
                     <div>{tuit.tuit}</div>
                     
-                    <div className="float-start col-3"><FaReply/> {tuit.replies}</div>
-                    <div className="float-start col-3"><FaRetweet/> {tuit.retuits}</div>
-                    <div className="float-start col-3">
-                        <button onClick={clicked} style={buttonStyle}>
-                            <FaHeart style={style} />
-                        </button>
-                        {tuit.likes}
+                    <div className="float-start col-2"><FaReply/> {tuit.replies}</div>
+                    <div className="float-start col-2"><FaRetweet/> {tuit.retuits}</div>
+                    <div className="float-start col-2">
+                        <FaHeart
+                            className=""
+                            onClick={() =>
+                                dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true }))
+                            }
+                            style={style}
+                        />
+                        <span className="ms-2">{tuit.likes}</span>
                     </div>
-                    <div className="float-end col-3"><FaShare /> </div>
+                    <div className="float-start col-2">
+                        <FaThumbsDown
+                            className=""
+                            onClick={() =>
+                                dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1, disliked: true }))
+                            }
+                           
+                        />
+                        <span className="ms-2">{tuit.dislikes}</span>
+                    </div>
+                    <div className="float-end col-2"><FaShare /> </div>
                     
                 </div>
                 
