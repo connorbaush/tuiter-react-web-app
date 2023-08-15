@@ -5,6 +5,7 @@ import Nav from "./nav";
 import { HashRouter } from "react-router-dom";
 import { Routes, Route } from "react-router";
 
+
 function App() {
     return (
         <HashRouter>
